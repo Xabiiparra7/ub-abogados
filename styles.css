@@ -1,0 +1,273 @@
+:root {
+  --navy: #10233f;
+  --navy-dark: #0a1830;
+  --gold: #b68d40;
+  --cream: #f7f4ee;
+  --text: #1c1c1c;
+  --muted: #5a6472;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--navy);
+}
+
+p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #eae6dd;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.nav__cta {
+  background: var(--navy);
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, var(--cream) 0%, #fff 100%);
+  padding: 90px 0 70px;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--navy);
+}
+
+.hero__subtitle {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  font-size: 1.15rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn--primary {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+/* Sections */
+.section {
+  padding: 70px 0;
+}
+
+.section--alt {
+  background: var(--cream);
+}
+
+.section#sobre-mi p {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eae6dd;
+  border-radius: var(--radius);
+  padding: 26px;
+}
+
+.card h3 {
+  color: var(--navy);
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Features */
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.features h3 {
+  color: var(--gold);
+  font-size: 1.05rem;
+}
+
+.features p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Contact */
+.section--dark {
+  background: var(--navy-dark);
+  color: #fff;
+  text-align: center;
+}
+
+.section--dark h2 {
+  color: #fff;
+}
+
+.section--dark p {
+  color: #cfd6e0;
+}
+
+.contacto__datos {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.contacto__datos a,
+.contacto__datos span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.contacto__datos a:hover {
+  color: var(--gold);
+}
+
+/* Footer */
+.footer {
+  background: var(--navy);
+  color: #cfd6e0;
+  text-align: center;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    gap: 14px;
+  }
+  .nav a:not(.nav__cta) {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
